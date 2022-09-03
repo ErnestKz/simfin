@@ -51,7 +51,7 @@ statementQueryToQueryParams :: StatementQuery -> [QueryParam]
 statementQueryToQueryParams StatementQuery{..} =
   let
     refParams = stockRefsToQueryParams stockRefs
-    startParam = toShownCommaQueryParam "start "$ maybeToList start
+    startParam = toShownCommaQueryParam "start" $ maybeToList start
     endParam = toShownCommaQueryParam "end" $ maybeToList end
     periodParam = toCommaQueryParam "period" fiscalPeriodParam periods
     yearParam = toShownCommaQueryParam "fyear" years
